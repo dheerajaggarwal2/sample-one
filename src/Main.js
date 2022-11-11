@@ -6,6 +6,7 @@ import { Circles } from "react-loader-spinner";
 function Main() {
   const [loaderStatus, setLoader] = React.useState(false);
   const [songsListing, setSongListing] = React.useState([]);
+  const [getSearchText, setSearchText] = React.useState([]);
 
   const fetchSongsRequest = (searchText) => {
     const options = {
@@ -28,6 +29,7 @@ function Main() {
   const getSongList = debounce(fetchSongsRequest, 500);
 
   const inputChange = (event) => {
+    setSearchText(event?.target?.value);
     const searchText = event?.target?.value;
     if (searchText.length >= 3) {
       setLoader(true);
@@ -35,11 +37,26 @@ function Main() {
     }
   }
 
+  const clearText = () => {
+    setSearchText("");
+  }
+
   return (
     <div>
+      <div className='heading'><h1>Search Songs</h1></div>
       <div className='inputContainer'>
-        <input type="text" onChange={inputChange}/>
-        <button>Search</button>
+        <input
+          type="text"
+          placeholder='Start typing a name of song'
+          value={getSearchText}
+          onChange={inputChange}
+        />
+        <button
+          className='btnCls'
+          onClick={clearText}
+        >
+          Clear
+        </button>
       </div>
       <div className='container'>
         {!loaderStatus && !!songsListing?.length && <table>

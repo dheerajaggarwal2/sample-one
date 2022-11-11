@@ -32,3 +32,11 @@ input {
   margin: auto;
   width: 50px;
 }
+
+.heading {
+  text-align: center;
+}
+
+.btnCls {
+  height: 45px;
+}
