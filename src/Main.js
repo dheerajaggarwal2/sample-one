@@ -2,6 +2,9 @@ import React from 'react';
 import { debounce } from './commonFunction';
 import './Main.css';
 import { Circles } from "react-loader-spinner";
+import { Link } from "react-router-dom";
+
+let getSongList;
 
 function Main() {
   const [loaderStatus, setLoader] = React.useState(false);
@@ -17,7 +20,7 @@ function Main() {
       }
     };
     
-    fetch(`https://shazam.p.rapidapi.com/search?term=${searchText}&locale=en-US&offset=0&limit=5`, options)
+    fetch(`https://shazam.p.rapidapi.com/search?term=${searchText}&locale=en-US&offset=0&limit=50`, options)
       .then(response => response.json())
       .then((response) => {
         console.log(response?.artists?.hits)
@@ -26,7 +29,9 @@ function Main() {
       }).catch(err => console.error(err));
   }
 
-  const getSongList = debounce(fetchSongsRequest, 500);
+  React.useEffect(() => {
+    getSongList = debounce(fetchSongsRequest, 500);
+  }, []);
 
   const inputChange = (event) => {
     setSearchText(event?.target?.value);
@@ -81,7 +86,7 @@ function Main() {
                     alt={item?.artist?.adamid}
                   />
                 </td>
-                <td>{item?.artist?.name}</td>
+                <td><Link to={`/details/${item?.artist?.adamid}`}>{item?.artist?.name}</Link></td>
                 <td><a href={item?.artist?.weburl}>{item?.artist?.weburl}</a></td>
               </tr>
             );
