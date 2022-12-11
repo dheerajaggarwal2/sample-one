@@ -1,20 +1,13 @@
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: 30px;
+  width: 100%;
 }
 
 .buttonT {
   margin: auto 0;
-  padding-left: 30px;
-}
-
-.textOne {
-  width: 30%;
-}
-
-.textTwo {
-  width: 30%;
+  padding-top: 30px;
 }
 
 .textAreaOne {
@@ -26,8 +19,7 @@
 }
 
 .iconStyle {
-  padding-left: 20px;
-  padding-right: 20px;
+  text-align: center;
 }
 
 button {
@@ -41,6 +33,6 @@ button {
   font-size: 16px;
 }
 
-.labelD {
+/* .labelD {
   text-align: center;
-}
+} */

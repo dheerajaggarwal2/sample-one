@@ -1,6 +1,6 @@
 import React from "react";
 import './Translate.css';
-import { FaArrowsAltH } from "react-icons/fa";
+import { FaArrowsAltV } from "react-icons/fa";
 
 function Main() {
   const [inputTextOne, setTextOne] = React.useState("");
@@ -65,13 +65,14 @@ function Main() {
           type="text"
           onChange={(event) => { setTextOne(event.target.value); }}
           value={inputTextOne}
+          rows="5"
         />
       </div>
       <div className="iconStyle" onClick={changesLnType}>
         <div>
         <span>Switch</span>
           </div>
-        <FaArrowsAltH size={40}/>
+        <FaArrowsAltV size={40}/>
       </div>
       <div className="textTwo">
         <div className="labelD">
@@ -83,6 +84,7 @@ function Main() {
           onChange={(event) => { setTextTwo(event.target.value); }}
           value={inputTextTwo}
           disabled={true}
+          rows="5"
         />
       </div>
       <div className="buttonT">
