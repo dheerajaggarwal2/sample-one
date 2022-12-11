@@ -3,6 +3,7 @@ import { debounce } from './commonFunction';
 import './Main.css';
 import { Circles } from "react-loader-spinner";
 import { Link } from "react-router-dom";
+import ArtistDetails from './ArtistDetails';
 
 let getSongList;
 

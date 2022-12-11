@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Main from "./Main"
+import Main from "./Translate/Main"
 import ArtistDetails from "./ArtistDetails"
 
 function App() {
