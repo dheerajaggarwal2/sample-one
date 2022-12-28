@@ -56,7 +56,7 @@ export default function Game() {
             return { ...item, show: flag };
           });
           setList(newMock);
-        }, 100);
+        }, 500);
       }
     }
   };
