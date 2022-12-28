@@ -1,0 +1,42 @@
+table, th, td {
+  border:1px solid black;
+}
+
+input {
+  width: 50%;
+  height: 40px;
+}
+
+.inputContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.container {
+  margin-top: 30px;
+}
+
+.imgContainer {
+  position: relative;
+  display: block;
+  width: 30vh;
+  min-height: 30vh;
+}
+
+.imgB {
+  height: auto;
+  width: 100%;
+}
+
+.loaderClass {
+  margin: auto;
+  width: 50px;
+}
+
+.heading {
+  text-align: center;
+}
+
+.btnCls {
+  height: 45px;
+}

@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  width: 100%;
+}
+
+.buttonT {
+  margin: auto 0;
+  padding-top: 30px;
+}
+
+.textAreaOne {
+  width: 100%;
+}
+
+.textAreaTwo {
+  width: 100%;
+}
+
+.iconStyle {
+  text-align: center;
+}
+
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/* .labelD {
+  text-align: center;
+} */
