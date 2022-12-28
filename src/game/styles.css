@@ -3,6 +3,13 @@
   text-align: center;
 }
 
+.mainGame {
+  margin-top: 20px;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 40px;
+}
+
 .timerContainer {
   text-align: left;
   float: left;
