@@ -1,0 +1,28 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.timerContainer {
+  text-align: left;
+  float: left;
+}
+
+.restartButton {
+  float: right;
+}
+
+.homepageContainer {
+  font-size: 40px;
+}
+
+.startContainer {
+  margin-top: 20px;
+}
+
+.gameContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
