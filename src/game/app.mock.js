@@ -1,4 +1,4 @@
-import { images, blankCard } from "./images";
+import { images } from "./images";
 
 const MOCK = [
   {
