@@ -1,0 +1,27 @@
+.mainContainer {
+  margin: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: rgb(55, 55, 184);
+  height: 100px;
+  margin: 20px;
+  text-align: center;
+}
+
+.cardText {
+  color: red;
+}
+
+.card:hover {
+  background-color: aqua;
+}

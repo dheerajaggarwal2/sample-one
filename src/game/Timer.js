@@ -43,3 +43,12 @@ export default function Timer({ startTimer, stopTimer }) {
     </div>
   );
 }
+
+
+function usePrevios(count) {
+  const value = React.useRef();
+  React.useEffect(() => {
+    value.current = count;
+  }, [count])
+  return value.current;
+}

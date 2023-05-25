@@ -9,6 +9,9 @@ function Test1({ name }) {
   console.log("userDetails", userDetails);
   React.useEffect(() => {
     console.log("dheeraj child 1")
+    return () => {
+      alert("removed")
+    }
     // prev.current = count;
   }, []);
   return (
