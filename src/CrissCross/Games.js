@@ -9,7 +9,7 @@ let dignaol = 0;
 let reverseDiagnol = 0;
 let pass = 0;
 export default function Game() {
-  let CreateBoard = Array(n).fill(0).map(() => new Array(n).fill(0))
+  let CreateBoard = new Array(n).fill(0).map(() => new Array(n).fill(0))
   const [board, setBoard] = React.useState(CreateBoard);
   const [player, setPlayer] = React.useState(1);
   const [colorTin, changeColor] =  React.useState(true);

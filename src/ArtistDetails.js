@@ -5,7 +5,8 @@ import { useParams } from "react-router-dom";
 
 function ArtistDetails() {
   const [count, setCount] = React.useState(0);
-  const prev = React.useRef(count);
+  // const prev = React.useRef(count);
+  // const val = getPrev(count);
   React.useEffect(() => {
     console.log("dheeraj parent")
     // prev.current = count;
@@ -17,5 +18,14 @@ function ArtistDetails() {
     // </div>
   )
 }
+
+
+// function usePw(count) {
+//   const prev = React.useRef();
+//   React.useEffect(() => {
+//     prev.current = count
+//   }, [count])
+//   return prev.current;
+// }
 
 export default ArtistDetails;
