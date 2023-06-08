@@ -1,0 +1,27 @@
+
+.productDetailsName {
+  padding-left: 8px;
+  font-size: 16px;
+  color: #878787;
+}
+
+.productDetailsPrice {
+  background-color: #c9f9c9;
+  height: 30px;
+  margin: 10px;
+  padding-left: 8px;
+  padding-top: 10px;
+}
+
+.sizeProductDetails {
+  padding-left: 8px;
+}
+
+.sizeValue {
+  border: 1px solid black;
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+  height: 26px;
+  margin-top: 5px;
+}

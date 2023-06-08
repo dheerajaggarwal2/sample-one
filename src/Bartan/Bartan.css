@@ -1,0 +1,14 @@
+.mainBartanContainer {
+  padding-top: 30px;
+}
+
+.imgContainer {
+  display: flex;
+  min-height: 30vh;
+}
+
+.imageStyle {
+  height: auto;
+  width: 100%;
+  margin: auto;
+}

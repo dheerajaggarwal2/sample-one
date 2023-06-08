@@ -1,0 +1,15 @@
+.footerCartContainer {
+  position: fixed;
+  bottom: 0px;
+  width: 99%;
+  height: 35px;
+  border: 2px solid red;
+  border-radius: 2px;
+}
+
+.footerHeading {
+  text-align: center;
+  margin: auto;
+  margin-top: 7px;
+  font-weight: 700;
+}
