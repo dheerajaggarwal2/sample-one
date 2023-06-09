@@ -1,8 +1,10 @@
-import { LIST_DATA } from "./constants";
+import { LIST_DATA, CART_COUNT } from "./constants";
 
 function reducer(state, action) {
   console.log("reduce", action);
   switch (action.type) {
+    case CART_COUNT:
+      return action?.payload || 0;
     case LIST_DATA:
       return action?.payload || [];
     case "example":

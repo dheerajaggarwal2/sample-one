@@ -41,7 +41,7 @@ const Pandetails = () => {
           <div className="sizeValue">{`${panDetails?.size} L`}</div>
         </div>
       </div>
-      <AddToCart heading="Add to Cart"/>
+      <AddToCart heading="Add to Cart" item={panDetails}/>
       </div>
     </>
   );
