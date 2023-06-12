@@ -5,10 +5,12 @@ import "./Header.css"
 import { CartItemsLS } from "../Constants";
 import { getFromLocalStorage } from "../utils";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 const Header = (props) => {
+  const navigate = useNavigate();
   const cartItems = getFromLocalStorage(CartItemsLS) || [];
-  const { title = "" } = props;
+  const { title = "", showBackArrowIcon = true, showCartIcon = true } = props;
   const [cartCount, setCartCount] = React.useState(cartItems.length || 0)
   const getcount = useSelector(state => state);
 
@@ -16,8 +18,11 @@ const Header = (props) => {
     window.history.back();
   }
 
+  const goToCartPage = () => {
+    navigate(`/cartList`);;
+  }
+
   React.useEffect(() => {
-    console.log("dheeraj inside getcount", getcount)
     if (getcount) {
       setCartCount(getcount);
     }
@@ -25,18 +30,18 @@ const Header = (props) => {
   
   return (
     <div className="headerContainer">
-      <div className="backArrowStyle" onClick={() => {goBack()}}>
+      {showBackArrowIcon && <div className="backArrowStyle" onClick={() => {goBack()}}>
         <BiArrowBack />
-      </div>
+      </div>}
       <div className="titleHeaderContainer">{title}</div>
-      <div className="cartIconStyle">
+      {showCartIcon && <div className="cartIconStyle" onClick={goToCartPage}>
         <AiOutlineShoppingCart />
         {!!cartCount &&
           <span className="cartCoutStyle">
             {cartCount}
           </span>
         }
-      </div>
+      </div>}
     </div>
   )
 }

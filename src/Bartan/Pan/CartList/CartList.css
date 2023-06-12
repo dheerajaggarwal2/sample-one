@@ -1,0 +1,120 @@
+.cartImageContainer {
+  width: 25%;
+}
+
+.cartBartanContainer {
+  padding-top: 35px;
+  padding-bottom: 40px;
+}
+
+.cartProductInfo {
+  width: 75%;
+  display: inline-block;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+.cartContainer {
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  border: 2px solid #f6f5ff
+}
+
+.cartImgContainer {
+  display: flex;
+  min-height: 15vh;
+}
+
+.cartProductName {
+  display: inline-block;
+  font-size: 14px;
+  color: #878787;
+}
+
+.cartDiscountProductPrice {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #212121;
+}
+
+.cartActualProducPrice {
+  text-decoration: line-through;
+  display: inline-block;
+  font-size: 14px;
+  color: #878787;
+  margin-left: 8px;
+}
+
+.cartDiscountpercnt {
+  display: inline-block;
+  color: #388e3c;
+  font-size: 13px;
+  letter-spacing: -.2px;
+  font-weight: 500;
+  margin-left: 8px;
+}
+
+.qtyDecrease {
+  display: inline-block;
+  border: 2px solid black;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.productQuantity {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.qtyIncrease {
+  display: inline-block;
+  border: 2px solid black;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.qtyText {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.cartPriceContainer {
+  padding-top: 10px;
+}
+
+.quantityPriceContainer {
+  padding-top: 10px;
+}
+
+.removeItem {
+  font-size: 14px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+.emptyCart {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.emptyCartbutton {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  margin-top: 20px;
+}
