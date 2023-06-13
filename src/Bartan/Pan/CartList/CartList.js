@@ -7,11 +7,23 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import "./CartList.css"
 import { useNavigate } from "react-router-dom";
 import CheckoutButton from "../../CheckoutButton/CheckoutButton";
+import Dialog from '@material-ui/core/Dialog';
+import AddAddress from "../../AddressSection/AddAddress";
 
 const CartList = () => {
   const navigate = useNavigate();
+  const [open, setOpen] = React.useState(false);
   const cartItems = getFromLocalStorage(CartItemsLS) || [];
   const [cartItemList, setCartItems] = React.useState(cartItems)
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
   const decreaseQuantity = (cartItem) => {
     const quantity = (cartItem?.quantity || 1);
     if (quantity <= 1) return;
@@ -65,6 +77,9 @@ const CartList = () => {
     <>
       <Header title="My Cart" showCartIcon={false} />
       <div className="cartBartanContainer">
+        <button type="button" onClick={handleOpen}>
+          Add Address
+        </button>
         {cartItemList.map((item, index) => {
           return (
             <div
@@ -145,6 +160,13 @@ const CartList = () => {
         }
       </div>
       <CheckoutButton cartItemList={cartItemList} />
+      <Dialog
+        onClose={handleClose}
+        open={open}
+        fullScreen
+      >
+        <AddAddress closeModal={handleClose}/>
+      </Dialog>
     </>
   )  
 }

@@ -3,8 +3,9 @@
   bottom: 0px;
   width: 99%;
   height: 35px;
-  border: 2px solid red;
+  border: 2px solid #4CAF50;
   border-radius: 2px;
+  background-color: #4CAF50;
 }
 
 .footerHeading {

@@ -1,0 +1,50 @@
+.addAdressContainer {
+  padding-top: 35px;
+  margin: 15px;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-control label {
+  width: 50%;
+  padding-right: 20px;
+  margin-bottom: 5px;
+}
+
+.form-control input[type="text"],
+.form-control input[type="number"] {
+  width: 80%;
+  padding: 5px;
+}
+
+.errorMsg {
+  max-width: 350px;
+  color: #f21e08;
+  padding: 2px 0;
+  margin-top: 2px;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 0px;
+}
+
+.footerAddAddress {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+}
+
+.footerAddAddresHeading {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  margin-top: 7px;
+  font-weight: 700;
+  background-color: #4CAF50;
+  border: 2px solid #4CAF50;
+  height: 35px;
+  font-size: 16px;
+}
