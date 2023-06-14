@@ -8,6 +8,7 @@ import "./CartList.css"
 import { useNavigate } from "react-router-dom";
 import CheckoutButton from "../../CheckoutButton/CheckoutButton";
 import ShowAddress from "../../AddressSection/ShowAddress";
+import PriceSection from "../../OrderSummary/PriceSection";
 
 const CartList = () => {
   const navigate = useNavigate();
@@ -147,8 +148,14 @@ const CartList = () => {
             </button>
           </div>
         }
+         <PriceSection
+          cartItemList={cartItemList}
+        />
       </div>
-      <CheckoutButton cartItemList={cartItemList} />
+      <CheckoutButton
+        cartItemList={cartItemList}
+        heading="Checkout"
+      />
     </>
   )  
 }

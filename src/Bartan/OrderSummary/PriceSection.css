@@ -1,0 +1,38 @@
+.priceSectionContainer {
+  padding: 10px;
+  border-bottom: 2px solid #f6f5ff;
+}
+
+.headingPrice {
+  margin-bottom: 10px;
+}
+
+.rowContainer {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.leftText {
+  width: 50%;
+  font-size: 14px;
+  color: #878787;
+}
+
+.rightText {
+  width: 50%;
+  font-size: 14px;
+  text-align: right;
+}
+
+.amountClass {
+  border-top: 2px solid #f6f5ff;
+  border-bottom: 2px solid #f6f5ff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.finalText {
+  color: #4CAF50;
+  font-size: 14px;
+}

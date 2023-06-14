@@ -1,0 +1,17 @@
+.orderSummaryBartanContainer {
+  padding-top: 35px;
+  padding-bottom: 40px;
+}
+
+.showOrderAddressContainer {
+  padding-top: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f6f5ff;
+}
+
+.orderAddressField {
+  font-size: 14px;
+  margin-top: 5px;
+}

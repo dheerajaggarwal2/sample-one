@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 const AddToCart = (props) => {
   const dispatch = useDispatch();
-  const notify = () => toast(
+  const notify = () => toast.success(
     <div>
       <div className="addToCartToastText">Item Added to cart</div>
       <div className="goToCartToastText"><Link to="/cartList">Go to Cart</Link></div>
@@ -42,7 +42,6 @@ const AddToCart = (props) => {
     <div className="footerCartContainer" onClick={pushToCart}>
       <div className="footerHeading">{itemAdded ? "Added to Cart" : heading}</div>
       <ToastContainer
-        className="toastStyling"
         position="bottom-center"
         hideProgressBar={true}
         autoClose={5000}

@@ -75,9 +75,6 @@
   font-size: 14px;
   width: 80%;
   margin-top: 5px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
 }
 
 .addressButton {
