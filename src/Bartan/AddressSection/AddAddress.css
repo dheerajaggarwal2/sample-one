@@ -48,3 +48,53 @@
   height: 35px;
   font-size: 16px;
 }
+
+.showAddressContainer {
+  display: flex;
+  flex-direction: row;
+  padding-top: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+}
+
+.openAddressDialog {
+  border: none;
+  color: white;
+  padding: 7px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  width: 100%;
+}
+
+.addressField {
+  font-size: 14px;
+  width: 80%;
+  margin-top: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.addressButton {
+  width: 20%;
+}
+
+.addressListSection {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid #f6f5ff;
+  padding: 15px;
+}
+
+.pdTop {
+  padding-top: 35px;
+}
+
+.MuiRadio-colorSecondary.Mui-checked {
+  color: #4CAF50 !important;
+}

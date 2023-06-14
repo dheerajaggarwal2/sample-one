@@ -2,9 +2,11 @@ import React from "react";
 import "./AddAddress.css"
 import { useForm } from "react-hook-form";
 import { BiArrowBack } from "react-icons/bi";
+import { setInLocalStorage, getFromLocalStorage } from "../utils";
+import { AddressList } from "../Constants";
 
 const AddAddressDialog = (props) => {
-  const { closeModal } = props
+  const { closeModal } = props;
   const {
     register,
     handleSubmit,
@@ -12,7 +14,21 @@ const AddAddressDialog = (props) => {
   } = useForm();
 
   const onSubmit = (data) => {
+    const savedAdress = getFromLocalStorage(AddressList) || [];
+    const addresObject = {
+      ...data,
+      state: "Delhi",
+      city: "Delhi",
+      isSelected: true
+    }
+    const updatePreviousAddress = savedAdress.map((item) => {
+      return { ...item, isSelected: false}
+    });
+
+    const updatedAddres = [addresObject, ...updatePreviousAddress]
+    setInLocalStorage(AddressList, updatedAddres)
     console.log(data);
+    closeModal()
   };
 
   return (
@@ -123,7 +139,7 @@ const AddAddressDialog = (props) => {
           </div>
         </div>
         <div className="footerAddAddress">
-          <button type="submit" className="footerAddAddresHeading">Add</button>  
+          <button type="submit" className="footerAddAddresHeading">Save</button>  
         </div>
       </form>
     </>
