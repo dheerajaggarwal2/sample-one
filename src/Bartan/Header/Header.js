@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 const Header = (props) => {
   const navigate = useNavigate();
   const cartItems = getFromLocalStorage(CartItemsLS) || [];
-  const { title = "", showBackArrowIcon = true, showCartIcon = true } = props;
+  const { title = "", showBackArrowIcon = true, showCartIcon = true, showTitle = true } = props;
   const [cartCount, setCartCount] = React.useState(cartItems.length || 0)
   const getcount = useSelector(state => state);
 
@@ -33,7 +33,7 @@ const Header = (props) => {
       {showBackArrowIcon && <div className="backArrowStyle" onClick={() => {goBack()}}>
         <BiArrowBack />
       </div>}
-      <div className="titleHeaderContainer">{title}</div>
+      {showTitle && <div className="titleHeaderContainer">{title}</div>}
       {showCartIcon && <div className="cartIconStyle" onClick={goToCartPage}>
         <AiOutlineShoppingCart />
         {!!cartCount &&

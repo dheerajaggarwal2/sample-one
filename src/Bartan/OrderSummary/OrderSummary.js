@@ -5,6 +5,7 @@ import { AddressList, CartItemsLS } from "../Constants";
 import "./OrderSummary.css"
 import CheckoutButton from "../CheckoutButton/CheckoutButton";
 import PriceSection from "./PriceSection";
+import Payment from "./Payment";
 
 const OrderSummary = () => {
  
@@ -27,6 +28,7 @@ const OrderSummary = () => {
         <PriceSection
           cartItemList={cartItems}
         />
+        <Payment />
       </div>
       <CheckoutButton
         cartItemList={cartItems} 

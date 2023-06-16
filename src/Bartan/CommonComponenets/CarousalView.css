@@ -1,0 +1,69 @@
+.carousalContainer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.scroll-images {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-images::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaa;
+  display: none;
+  
+}
+
+.scroll-images::-webkit-scrollbar-thumb {
+  background-color: black;
+}
+
+.child {
+  width: 120px;
+  height: 140px;
+  margin: 1px 5px;
+  border: 2px solid #f6f5ff;
+  padding: 5px;
+}
+
+.carousalImageContainer {
+  display: flex;
+  min-height: 100px;
+}
+
+.carousalImageStyle {
+  height: auto;
+  width: 120px;
+  margin: auto;
+}
+
+.carousalItemName {
+  font-size: 14px;
+  text-align: center;
+  color: #7e7777;
+}
+
+.headingContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 10px 10px 10px;
+}
+
+.headingText {
+  font-size: 16px;
+  width: 50%;
+}
+
+.seeAllText {
+  width: 50%;
+  font-size: 12px;
+  text-align: right;
+}

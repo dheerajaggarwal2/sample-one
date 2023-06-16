@@ -7,13 +7,15 @@ import PanListing from './Bartan/Pan/PanListing/PanListing';
 import PanDetails from './Bartan/Pan/PanDetails/PanDetails';
 import CartList from './Bartan/Pan/CartList/CartList';
 import OrderSummary from './Bartan/OrderSummary/OrderSummary';
+import HomePage from './Bartan/HomePage/HomePage';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" >
-          <Route index element={<PanListing />} />
+          <Route index element={<HomePage />} />
+          <Route path="listing" element={<PanListing />} />
           <Route path="games" element={<Games />} />
           <Route path="panDetails/:id" element={<PanDetails />} />
           <Route path="cartList" element={<CartList />} />

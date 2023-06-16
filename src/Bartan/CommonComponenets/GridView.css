@@ -1,0 +1,33 @@
+.gridViewContainer    {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.gridRowParent {
+  display: flex;
+  flex-direction: row;
+}
+
+.gridRowChild {
+  width: 50%;
+  border: 2px solid #f6f5ff;
+  margin: 5px;
+  height: 175px;
+}
+
+.gridImgContainer {
+  display: flex;
+  min-height: 150px;
+}
+
+.gridImageStyle {
+  height: auto;
+  width: 100%;
+  margin: auto;
+}
+
+.gridItemText {
+  font-size: 14px;
+  text-align: center;
+  color: #7e7777;
+}
