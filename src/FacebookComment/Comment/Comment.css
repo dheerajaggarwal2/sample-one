@@ -1,0 +1,37 @@
+.commentContainer {
+  display: flex;
+}
+
+.commentText {
+  min-height: 50px;
+  width: 200px;
+  border-radius: 10px;
+  border: 2px solid;
+  padding: 5px;
+  margin: 5px 5px 0px 5px;
+}
+
+.childItems {
+  padding-left: 30px;
+}
+
+.imageStyleComment {
+  width: 20px;
+  height: 20px;
+}
+
+.replyContainer {
+  font-size: 10px;
+  text-align: right;
+  margin: 2px 10px 5px 0px;
+}
+
+.inputContainer {
+  position: absolute;
+  bottom: 0px;
+}
+
+.inputClass {
+  width: 100vw;
+  height: 30px;
+}

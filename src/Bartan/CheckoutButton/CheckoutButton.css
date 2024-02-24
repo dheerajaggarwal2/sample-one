@@ -39,3 +39,8 @@
 .priceText {
   font-size: 12px;
 }
+
+.loaderClass {
+  margin: auto;
+  width: 50px;
+}

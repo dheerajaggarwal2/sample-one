@@ -155,6 +155,7 @@ const CartList = () => {
       <CheckoutButton
         cartItemList={cartItemList}
         heading="Checkout"
+        type={2}
       />
     </>
   )  

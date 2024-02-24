@@ -35,6 +35,7 @@ const AddToCart = (props) => {
       setInLocalStorage(CartItemsLS, updatecartItems)
       setItemAdded(checkItemAdded());
       dispatch({ type: CART_COUNT, payload: updatecartItems.length });
+      // dispatch({ type: "TEST", payload: 10 });
     }
   }
  

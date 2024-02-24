@@ -1,0 +1,28 @@
+.childFiles {
+  width: 140px;
+  background-color: yellow;
+  width: 200px;
+  border: 2px solid;
+  margin: 10px;
+  padding: 5px
+}
+
+.callingComp {
+  padding-left: 10px;
+}
+
+.buttonsStyle {
+  float: right;
+}
+
+.inputContainerFile {
+  width: 140px;
+  width: 200px;
+  margin: 10px;
+  padding-left: 10px;
+}
+
+.inputStyleFile {
+  width: 200px;
+  height: 24px;
+}

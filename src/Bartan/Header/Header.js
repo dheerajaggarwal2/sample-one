@@ -12,7 +12,10 @@ const Header = (props) => {
   const cartItems = getFromLocalStorage(CartItemsLS) || [];
   const { title = "", showBackArrowIcon = true, showCartIcon = true, showTitle = true } = props;
   const [cartCount, setCartCount] = React.useState(cartItems.length || 0)
-  const getcount = useSelector(state => state);
+  const getcount = useSelector((state) => {
+    return state?.cartCount;
+  });
+  console.log("dheeraj getcount", getcount)
 
   const goBack = () => {
     window.history.back();

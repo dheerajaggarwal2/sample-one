@@ -5,10 +5,12 @@ import { getFromLocalStorage } from "../utils"
 import { AddressList } from "../Constants"
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { Circles, ProgressBar } from "react-loader-spinner";
 
 const CheckoutButton = (props) => {
   const navigate = useNavigate();
-  const { cartItemList = [], heading = "" } = props;
+  const { cartItemList = [], heading = "", type = 0 } = props;
+  const [ isLoading, setLoading ] = React.useState(false);
   const [totalPrice, setTotalPrice] = React.useState(0);
   const notify = () => toast.error("Please select or add a address for delivery");
 
@@ -26,7 +28,28 @@ const CheckoutButton = (props) => {
       notify();
       return;
     }
-    navigate('/ordersummary');;
+    if (type === 1) {
+      setLoading(true)
+      const options = {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({orderDetails: cartItemList, userInfo: savedAdress}),
+      }
+      fetch("http://localhost:8000/api/placeorder", options)
+      .then((res) => res.json())
+      .then((data) => {
+        alert("order Placed Succesfully");
+        navigate('/');
+      }).catch(() => {
+        alert("error in placing order");
+      }).finally(() => {
+        setLoading(false);
+      })
+    } else {
+      navigate('/ordersummary');
+    }
   }
 
   if (!cartItemList.length) return null;
@@ -40,12 +63,19 @@ const CheckoutButton = (props) => {
             <span>&#8377;</span><b>{totalPrice}</b>
           </div>
           <div className="placeOrderContainer" onClick={checkoutButtonClick}>
-            <button
-              type="button"
-              className="placeOrderButton"
-            >
+            {isLoading ? 
+              <div className='loaderClass'>
+                <ProgressBar
+                  color="rgb color"
+                  height={"40"}
+                />
+              </div>
+            : <button
+                type="button"
+                className="placeOrderButton"
+              >    
               {heading}
-            </button>
+            </button>}
           </div>
         </div>
       </div>

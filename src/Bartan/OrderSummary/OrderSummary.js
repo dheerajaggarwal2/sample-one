@@ -33,6 +33,7 @@ const OrderSummary = () => {
       <CheckoutButton
         cartItemList={cartItems} 
         heading="Place order"
+        type={1}
       />
     </>
   )  

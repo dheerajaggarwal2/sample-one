@@ -1,7 +1,27 @@
+// import { BrowserRouter, Route, Routes } from "react-router-dom";
+// // import Main from "./InterviewPractise/Main";
+// import UserDetails from "./InterviewPractise/User/UserDetails";
+// import Main from "./Search/Main"
+
+// const App = () => {
+//   return (
+//     <BrowserRouter >
+//       <Routes>
+//         <Route path="/">
+//           <Route index element={<Main />} />
+//           <Route path="details/:id" element={<UserDetails />} />
+//         </Route>
+//       </Routes>
+//     </BrowserRouter>
+//   )
+// };
+
+// export default App;
+
+
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Games from "./CrissCross/Games"
-import ArtistDetails from "./ArtistDetails"
 import FormDetails from "./StoreExample/FormDetails"
 import PanListing from './Bartan/Pan/PanListing/PanListing';
 import PanDetails from './Bartan/Pan/PanDetails/PanDetails';
@@ -21,7 +41,6 @@ function App() {
           <Route path="cartList" element={<CartList />} />
           <Route path="ordersummary" element={<OrderSummary />} />
           <Route path="formDetails/:name/:age" element={<FormDetails />} />
-          <Route path="details/:artistId" element={<ArtistDetails />} />
         </Route>
       </Routes>
     </BrowserRouter>
