@@ -65,9 +65,8 @@ app.post('/api/placeorder', async (req, res) => {
     const collection = database.collection('orderList');
 
     const newData = req.body;
-    console.log("dheeraj newData", newData)
-    const result = await collection.insertOne(newData);
-    console.log("dheeraj result", result)
+    const date = new Date();
+    await collection.insertOne({...newData, date });
     // Send the data as a response
     res.json({ message: 'Data inserted successfully' });
   } catch (error) {
