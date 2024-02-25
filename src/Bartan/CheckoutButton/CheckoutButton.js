@@ -37,7 +37,7 @@ const CheckoutButton = (props) => {
         },
         body: JSON.stringify({orderDetails: cartItemList, userInfo: savedAdress}),
       }
-      fetch("http://localhost:8000/api/placeorder", options)
+      fetch("https://bansal-service-api.onrender.com/api/placeorder", options)
       .then((res) => res.json())
       .then((data) => {
         alert("order Placed Succesfully");
