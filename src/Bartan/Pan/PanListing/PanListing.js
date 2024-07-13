@@ -20,7 +20,6 @@ const PanListing = () => {
     navigate(`/panDetails/${id}`);;
   }
 
-  console.log("dheeraj chunk res", rowChunks)
   return (
     <>
       <Header title="Pan utensils"/>
